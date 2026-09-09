@@ -144,10 +144,17 @@ module DE10_LITE_Golden_Top(
 		.hex(HEX3)
 	);
 	
-	bin7seg3 u2(
+	bin7seg3 u3(
 		.bin(SW[3:0]),
 		.hex(HEX5)
 	);
+	
+	assign LEDR[0] = SW[4];
+
+	assign HEX1 = 8'hFF;
+	assign HEX2 = 8'hFF;
+	assign HEX4 = 8'hFF;
+	assign LEDR[9:1] = 9'b0;
 
 
 endmodule

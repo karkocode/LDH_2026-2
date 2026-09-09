@@ -6,7 +6,7 @@ module adder_4b (
 
 	// somador em estrutura ripple carry
 	
-	wire [3:0] c;
+	wire [4:0] c;
 	
 	full_adder fa1 (
 		.a(a[0]), .b(b[0]), .ci(1'b0), .s(s[0]), .co(c[0]) 
