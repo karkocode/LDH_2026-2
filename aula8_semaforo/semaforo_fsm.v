@@ -65,33 +65,33 @@ module semaforo_fsm (
 				case(state)
 				
 					`STATE_RED_LOAD: begin
-						clear = 1;
+						clear = 	1;
 						lights = 3'b100;
-						sel = 2'd0;
+						sel = 	2'd0;
 					end
 					`STATE_RED: begin
 						lights = 3'b100;
-						sel = 2'd0;
+						sel = 	2'd0;
 					end
 					
 					`STATE_YELLOW_LOAD: begin
-						clear = 1;
-						lights = 3'b010;
-						sel = 2'd1;
+						clear =	 	1;
+						lights = 	3'b010;
+						sel =		 	2'd1;
 					end
 					`STATE_YELLOW: begin
-						lights = 3'b010;
-						sel = 2'd1;
+						lights =	 3'b010;
+						sel =		 2'd1;
 					end
 					
 					`STATE_GREEN_LOAD: begin
-						clear = 1;
+						clear = 	1;
 						lights = 3'b001;
-						sel = 2'd2;
+						sel = 	2'd2;
 					end
 					`STATE_GREEN: begin
 						lights = 3'b001;
-						sel = 2'd2;
+						sel = 	2'd2;
 					end
 				endcase
 			end

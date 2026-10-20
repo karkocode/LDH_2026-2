@@ -139,5 +139,6 @@ module DE10_LITE_Golden_Top(
 		.rst(~KEY[0]),
 		.lights(LEDR[2:0])
 	);
+	
 
 endmodule

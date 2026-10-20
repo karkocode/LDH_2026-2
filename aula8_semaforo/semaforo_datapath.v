@@ -23,7 +23,7 @@ module semaforo_datapath (
 	//multiplexador para seleção do tempo
 	always @(*) begin
 		case(sel)
-			0: sel_time = 20;
+			0: sel_time = 15;
 			1: sel_time = 2;
 			2: sel_time = 10;
 			default: sel_time = 31;
