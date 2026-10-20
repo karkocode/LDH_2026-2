@@ -23,7 +23,7 @@ module fsm_pattern_detector(
 
 	always @(*) begin
 		case(state)
-			`STATE_S0:		nextState = data ? `STATE_S1  	: `STATE_S0;	//if de uma linha
+			`STATE_S0:		nextState = data ? `STATE_S1  	: `STATE_S0;
 			`STATE_S1:		nextState = data ? `STATE_S11 	: `STATE_S0;
 			`STATE_S11:		nextState = data ? `STATE_S11 	: `STATE_S110;
 			`STATE_S110:	nextState = data ? `STATE_S1101  : `STATE_S0; 
@@ -37,12 +37,11 @@ module fsm_pattern_detector(
 		case(state)
 			`STATE_S1101: 	match = 1;
 			`STATE_S110: begin
-				if (data==1)
-					match = 1;
-				else
-					match = 1;
+				if(data==1) match = 1;
+				else			match = 0;
 			end
 			default:			match = 0;
 		endcase
 	end
+	
 endmodule
