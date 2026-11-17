@@ -8,10 +8,10 @@ module tb_impulse_response;
 	wire 		signed	[11:0] y;
 
 		always #5 clk = ~clk;	//clock 1MHz
-		
-		movavg_filter dut(
-			.reset(reset), .clk(clk), .x(x), .y(y) 
-		);
+
+	bw2_filter dut (
+	.reset(reset), .clk(clk), .x(x), .y(y)
+	);
 		
 		always begin
 			#10	$monitor("%d, %d", x, y);
